@@ -1,4 +1,4 @@
-package mx.gob.imss.cit.vcvd.correo.exceptions.integration.dto;
+package mx.ee.pr.correo.exceptions.integration.dto;
 
 import java.io.Serializable;
 import java.util.List;

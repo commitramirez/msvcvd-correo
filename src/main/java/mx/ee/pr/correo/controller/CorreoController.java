@@ -1,4 +1,4 @@
-package mx.gob.imss.cit.vcvd.correo.controller;
+package mx.ee.pr.correo.controller;
 
 import javax.validation.Valid;
 
@@ -11,16 +11,15 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import mx.gob.imss.cit.vcvd.correo.exceptions.BusinessException;
-import mx.gob.imss.cit.vcvd.correo.exceptions.integration.dto.CorreoDto;
-import mx.gob.imss.cit.vcvd.correo.exceptions.integration.dto.RespuestaError;
-import mx.gob.imss.cit.vcvd.correo.service.CorreoService;
+import mx.ee.pr.correo.exceptions.BusinessException;
+import mx.ee.pr.correo.exceptions.integration.dto.CorreoDto;
+import mx.ee.pr.correo.exceptions.integration.dto.RespuestaError;
+import mx.ee.pr.correo.service.CorreoService;
 
 @RestController
-@RequestMapping("/msvcvd-correo")
+//@RequestMapping("/msvcvd-correo/v1")
 @Validated
 @CrossOrigin
 public class CorreoController {
@@ -30,7 +29,7 @@ public class CorreoController {
 	@Autowired
 	CorreoService correoService;
 
-	@PostMapping(value = "/v1/correo", consumes = { "application/json" })
+	@PostMapping(value = "/email", consumes = { "application/json" })
 	public Object enviarCorreo(@RequestBody @Valid CorreoDto body) {
 		try {
 

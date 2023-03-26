@@ -18,13 +18,20 @@ spring:
 
 server:
   port: 8080
+  servlet:
+    context-path: /msvcvd-correo/v1
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
 
 info: 
   component: Microservicio de envío de correo.
   
 logging:
   file:
-    name: logs/msvcvd-correo.log
+    name: logs/mseepr-correo.log
   pattern:
     console: "%d %-5level %logger : %msg%n"
     file: "%d %-5level [%thread] %logger : %msg%n"

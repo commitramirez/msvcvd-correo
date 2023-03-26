@@ -8,9 +8,9 @@
 		<version>2.2.11.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>mx.gob.imss.cit.vcvd</groupId>
-	<artifactId>msvcvd-correo</artifactId>
-	<version>1.0.1</version>
+	<groupId>mx.ee.pr</groupId>
+	<artifactId>mseepr-correo</artifactId>
+	<version>1.0.3</version>
 	<name>msvcvd-correo</name>
 	<description>Servicio de envío de correo</description>
 
@@ -144,7 +144,16 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>build-info</id>
+						<goals>
+							<goal>build-info</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
+			
 			<plugin>
 			<groupId>org.apache.maven.plugins</groupId>
 			<artifactId>maven-compiler-plugin</artifactId>

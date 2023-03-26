@@ -1,4 +1,4 @@
-package mx.gob.imss.cit.vcvd.correo.service.impl;
+package mx.ee.pr.correo.service.impl;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -13,11 +13,11 @@ import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Service;
 
-import mx.gob.imss.cit.vcvd.correo.enums.EnumBusinnessError;
-import mx.gob.imss.cit.vcvd.correo.enums.EnumHttpStatus;
-import mx.gob.imss.cit.vcvd.correo.exceptions.BusinessException;
-import mx.gob.imss.cit.vcvd.correo.exceptions.integration.dto.CorreoDto;
-import mx.gob.imss.cit.vcvd.correo.service.CorreoService;
+import mx.ee.pr.correo.enums.EnumBusinnessError;
+import mx.ee.pr.correo.enums.EnumHttpStatus;
+import mx.ee.pr.correo.exceptions.BusinessException;
+import mx.ee.pr.correo.exceptions.integration.dto.CorreoDto;
+import mx.ee.pr.correo.service.CorreoService;
 
 @Service
 public class CorreoServiceImpl implements CorreoService {
