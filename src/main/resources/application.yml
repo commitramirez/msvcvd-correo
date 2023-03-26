@@ -1,0 +1,43 @@
+spring:
+  application:
+    name: msvcvd-correo
+  mail:
+    protocol: smtp
+    host: smtp.office365.com
+    username: joalragaee@outlook.com
+    password: alex1101
+    port: 587
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: false
+    test-connection: false 
+
+server:
+  port: 8080
+  servlet:
+    context-path: /msvcvd-correo/v1
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+
+info: 
+  component: Microservicio de envío de correo.
+  
+logging:
+  file:
+    name: logs/mseepr-correo.log
+  pattern:
+    console: "%d %-5level %logger : %msg%n"
+    file: "%d %-5level [%thread] %logger : %msg%n"
+  level:
+    org.springframework: INFO
+    org.springframework.data: DEBUG
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+    mx.gob.imss.cit: DEBUG    
