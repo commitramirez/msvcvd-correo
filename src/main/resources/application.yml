@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: msvcvd-correo
+
+server:
+  port: 8080
+  
+correo:
+  relay: smtp.live.com
+
+info: 
+  component: Microservicio de envío de correo.
+  
+logging:
+  file: logs/msvcvd-correo.log
+  pattern:
+    console: "%d %-5level %logger : %msg%n"
+    file: "%d %-5level [%thread] %logger : %msg%n"
+  level:
+    org.springframework: INFO
+    org.springframework.data: DEBUG
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+    mx.gob.imss.cit: DEBUG    
