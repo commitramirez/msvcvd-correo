@@ -40,7 +40,7 @@ public class CorreoController {
 
 			logger.info("Salida de enviarCorreo: " + body.getRecipientList());
 
-			return new ResponseEntity<>(HttpStatus.ACCEPTED);
+			return new ResponseEntity<>(true, HttpStatus.OK);
 
 		} catch (BusinessException be) {
 			int numberHTTPDesired = Integer.parseInt(be.getRespuestaError().getCode());

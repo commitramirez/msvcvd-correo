@@ -11,9 +11,6 @@ import lombok.Data;
 @Data
 public class CorreoDto implements Serializable{
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = -1267416571603324L;
 	
 	@NotNull (message = "La lista de destinatarios no puede ser null, verifique.")
