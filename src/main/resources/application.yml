@@ -1,18 +1,30 @@
 spring:
   application:
     name: msvcvd-correo
+  mail:
+    protocol: smtp
+    host: smtp.office365.com
+    username: joalragaee@outlook.com
+    password: alex1101
+    port: 587
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: false
+    test-connection: false 
 
 server:
   port: 8080
-  
-correo:
-  relay: smtp.live.com
 
 info: 
   component: Microservicio de envío de correo.
   
 logging:
-  file: logs/msvcvd-correo.log
+  file:
+    name: logs/msvcvd-correo.log
   pattern:
     console: "%d %-5level %logger : %msg%n"
     file: "%d %-5level [%thread] %logger : %msg%n"
