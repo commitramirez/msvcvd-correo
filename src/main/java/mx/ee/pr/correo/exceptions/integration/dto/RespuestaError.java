@@ -19,7 +19,7 @@ public class RespuestaError {
 		this.code = status.getCode().toString();
 		this.description = status.getDescription();
 		this.businessMessage = businessMessage;
-		this.uri = "http://msvcvd.imss.gob.mx/help?cveMessage=" + cveMessage;
+		this.uri = "http://urlDeMensaje/help?cveMessage=" + cveMessage;
 		this.contactEmail = "";
 
 		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSZ");

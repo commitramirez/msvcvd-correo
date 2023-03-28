@@ -19,7 +19,6 @@ import mx.ee.pr.correo.exceptions.integration.dto.RespuestaError;
 import mx.ee.pr.correo.service.CorreoService;
 
 @RestController
-//@RequestMapping("/msvcvd-correo/v1")
 @Validated
 @CrossOrigin
 public class CorreoController {
@@ -32,12 +31,8 @@ public class CorreoController {
 	@PostMapping(value = "/email", consumes = { "application/json" })
 	public Object enviarCorreo(@RequestBody @Valid CorreoDto body) {
 		try {
-
-			logger.info("Entrada a enviarCorreo: " + body.getRecipientList());
-
+			logger.info("[CorreoController] START enviarCorreo [Request] {}", body);
 			correoService.enviarCorreo(body);
-
-			logger.info("Salida de enviarCorreo: " + body.getRecipientList());
 
 			return new ResponseEntity<>(true, HttpStatus.OK);
 

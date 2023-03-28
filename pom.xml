@@ -11,7 +11,7 @@
 	<groupId>mx.ee.pr</groupId>
 	<artifactId>mseepr-correo</artifactId>
 	<version>1.0.3</version>
-	<name>msvcvd-correo</name>
+	<name>mseepr-correo</name>
 	<description>Servicio de envío de correo</description>
 
 	<properties>
@@ -36,7 +36,11 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-mail</artifactId>
-		</dependency>				
+		</dependency>		
+		<dependency>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>		
 		<dependency>
 		    <groupId>junit</groupId>
 		    <artifactId>junit</artifactId>

@@ -1,0 +1,299 @@
+			<!DOCTYPE html>  
+			<html xmlns:th="http://www.thymeleaf.org">  
+			  
+			<head>  
+			    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />  
+			    <meta http-equiv="X-UA-Compatible" content="IE=edge" />  
+			    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+			    <title>Notificaci&#243n</title>  
+
+			    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+
+			    <style id="applicationStylesheet" type="text/css">  
+			        .mediaViewInfo {  
+			            --web-view-name: ;  
+			            --web-view-id: Notificacion;  
+			            --web-scale-on-resize: true;  
+			            --web-enable-deep-linking: true;  
+			        }  
+			          
+			        :root {  
+			            --web-view-ids: Notificacion;  
+			        }  
+			          
+			        * {  
+			            margin: 0;  
+			            padding: 0;  
+			            box-sizing: border-box;  
+			            border: none;  
+			        }
+  
+			        #Notificacion {  
+			        	font-family: 'Montserrat' !important;
+			            position: absolute;
+			            top:50px;  
+			            width: 600px;  
+			            height: 1227px !important;  
+			            background-color: rgba(255, 255, 255, 1);  
+			            overflow: hidden; 
+			            --web-view-name: Notificacion;  
+			            --web-view-id: Notificacion;  
+			            --web-scale-on-resize: true;  
+			            --web-enable-deep-linking: true;  
+			            border: 1px solid;
+			            border-color: rgba(219, 214, 214, 1);
+			            left: 50px;
+			        }  
+			          
+                    .container{
+                        justify-content: center;
+                    }
+                      
+			        .fondo_blanco {  
+			            position: absolute;  
+			            overflow: visible;  
+			            width: 560px;  
+			            height: 1200px;  
+			            left: 25px;  
+			            top: 106px;  
+			        }  
+			        
+			          
+			        #logo_header {  
+			        	top: 50px;
+			            width: 63.787px;  
+			            height: 18.766px;  
+			            overflow: visible;
+			            display: block;
+			            margin: auto;  
+			        }
+
+			        #logo_footer {  
+			            position: absolute;  
+			            overflow: visible;  
+			            top: 1050px;  
+			        }  
+			          
+			          
+			        #NotificacionEDS {  
+			            position: relative;  
+			            left: 52px;  
+			            top: 73px;  
+			            overflow: visible;  
+			            width: 480px;  
+			            white-space: wrap;  
+			        }
+
+			        .tituloNegritas{
+						text-align: left;  
+			            font-style: bold;  
+			            font-weight: bold;  
+			            font-size: 18px;  
+			            color: rgba(112, 112, 112, 1);
+			        }
+
+			        .textoNegritasJustificado{
+			            font-style: bold;  
+			            font-weight: bold;    
+			            font-size: 14px;  
+			            color: rgba(112, 112, 112, 1);
+			            padding: 0px 0px; 
+			        }
+
+			        .textoNormalJustificado{
+			            font-style: normal;  
+			            font-weight: normal;  
+			            font-size: 14px;  
+			            color: rgba(112, 112, 112, 1);
+			            padding: 0px 0px; 
+			        }
+
+			        .textoNotaNormalJustificado{
+			            font-style: normal;  
+			            font-weight: normal;  
+			            font-size: 12px;  
+			            color: rgba(112, 112, 112, 1);
+			            padding: 0px 0px; 
+			        }
+
+			        .textoNotaNormalCentrado{
+			            font-style: normal;  
+			            font-weight: normal;  
+			            font-size: 12px;  
+			            color: rgba(112, 112, 112, 1);
+			            padding: 0px 0px; 
+			            text-align: center;
+			        }
+
+			        .textoAvisoNormalJustificado{
+			            font-style: normal;  
+			            font-weight: normal;  
+			            font-size: 10px;  
+			            color: rgba(112, 112, 112, 1);
+			            padding: 0px 0px; 
+			        }
+
+			        .textoAvisoNegritasJustificado{
+			            font-style: bold;  
+			            font-weight: bold;  
+			            font-size: 10px;  
+			            color: rgba(112, 112, 112, 1);
+			            padding: 0px 0px; 
+			        }
+
+			        .textoNormalCentrado{
+			            font-style: normal;  
+			            font-weight: normal;  
+			            font-size: 14px;  
+			            color: rgba(112, 112, 112, 1);
+			            padding: 0px 0px; 
+			            text-align: center;
+			        }  
+
+			        .thin {
+						height: 1px;
+						border: 0;
+						background-color: rgba(219, 214, 214, 1);
+						width: 100%;
+						} 
+			    </style>  
+			  
+			</head>  
+			  
+			<body>  
+			    <div id="Notificacion">
+			    	<br />
+			    	<br />    
+			        <svg class="fondo_blanco">  
+			            <rect fill="rgba(255,255,255,1)" stroke="rgba(112,112,112,1)" stroke-width="0px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="fondo_blanco" rx="0" ry="0" x="0" y="0" width="560" height="1200">  
+			            </rect>  
+			        </svg>  
+			        
+			        <div id="logo_header">
+			        	<svg xmlns="http://www.w3.org/2000/svg" width="82.079" height="64.775" viewBox="0 0 102.079 84.775">
+							<g transform="translate(0.381 0.381)">
+								<g transform="translate(0 0)">
+									<path d="M111.768,54.112V38.69a3.589,3.589,0,0,0-3.605-3.572H78.806A3.589,3.589,0,0,0,75.2,38.69V54.112H46.441a3.589,3.589,0,0,0-3.606,3.572V117.05a2.091,2.091,0,0,0,2.1,2.081h0a2.091,2.091,0,0,0,2.1-2.081V62.661a3.589,3.589,0,0,1,3.605-3.572H75.2l0,57.961a2.091,2.091,0,0,0,2.1,2.081h0a2.091,2.091,0,0,0,2.1-2.081V54.112h0V44.245a3.588,3.588,0,0,1,3.605-3.572h20.956a3.588,3.588,0,0,1,3.605,3.572v72.8a2.091,2.091,0,0,0,2.1,2.081h0a2.091,2.091,0,0,0,2.1-2.081l.016-57.961h24.561a3.589,3.589,0,0,1,3.605,3.572V117.05a2.091,2.091,0,0,0,2.1,2.081h0a2.091,2.091,0,0,0,2.1-2.081V57.685a3.588,3.588,0,0,0-3.605-3.572Z" transform="translate(-42.835 -35.118)" fill="#c45c5c" stroke="#c45c5c" stroke-miterlimit="10" stroke-width="0.762"/>
+									<path d="M68.437,43.882H64.3V39.207h-4.57v4.674H55.6V48.41h4.133v4.674H64.3V48.41h4.133Z" transform="translate(-11.36 -25.035)" fill="#c45c5c"/>
+									<rect width="4.202" height="10.739" rx="0.604" transform="translate(8.803 35.212)" fill="#c45c5c"/>
+									<rect width="4.202" height="10.739" rx="0.604" transform="translate(21.189 35.212)" fill="#c45c5c"/>
+									<rect width="4.202" height="10.739" rx="0.604" transform="translate(8.803 53.622)" fill="#c45c5c"/>
+									<rect width="4.202" height="10.739" rx="0.604" transform="translate(21.189 53.622)" fill="#c45c5c"/>
+									<rect width="4.202" height="10.739" rx="0.604" transform="translate(75.155 35.212)" fill="#c45c5c"/>
+									<rect width="4.202" height="10.739" rx="0.604" transform="translate(87.541 35.212)" fill="#c45c5c"/>
+									<rect width="4.202" height="10.739" rx="0.604" transform="translate(75.155 53.622)" fill="#c45c5c"/>
+									<rect width="4.202" height="10.739" rx="0.604" transform="translate(87.541 53.622)" fill="#c45c5c"/>
+								</g>
+								<path d="M97.116,81.932V27.544a3.589,3.589,0,0,0-3.605-3.572H68.95l-.016,57.96a2.092,2.092,0,0,1-2.1,2.082h0a2.091,2.091,0,0,1-2.1-2.082V9.127a3.588,3.588,0,0,0-3.605-3.572H40.172a3.588,3.588,0,0,0-3.605,3.572v9.868h0V81.932a2.1,2.1,0,0,1-4.2,0l0-57.96H7.807A3.589,3.589,0,0,0,4.2,27.544V81.932a2.091,2.091,0,0,1-2.1,2.082h0A2.091,2.091,0,0,1,0,81.932V22.567a3.589,3.589,0,0,1,3.606-3.572H32.366V3.572A3.589,3.589,0,0,1,35.971,0H65.328a3.589,3.589,0,0,1,3.6,3.572V18.995H97.711a3.589,3.589,0,0,1,3.605,3.572V81.932a2.1,2.1,0,0,1-4.2,0ZM88.144,64.361a.6.6,0,0,1-.6-.6V54.226a.6.6,0,0,1,.6-.6h3a.6.6,0,0,1,.6.6v9.532a.6.6,0,0,1-.6.6Zm-12.386,0a.6.6,0,0,1-.6-.6V54.226a.6.6,0,0,1,.6-.6h3a.6.6,0,0,1,.6.6v9.532a.6.6,0,0,1-.6.6Zm-53.967,0a.6.6,0,0,1-.6-.6V54.226a.6.6,0,0,1,.6-.6h3a.6.6,0,0,1,.6.6v9.532a.6.6,0,0,1-.6.6Zm-12.386,0a.6.6,0,0,1-.6-.6V54.226a.6.6,0,0,1,.6-.6h3a.6.6,0,0,1,.6.6v9.532a.6.6,0,0,1-.6.6Zm78.738-18.41a.6.6,0,0,1-.6-.6V35.816a.6.6,0,0,1,.6-.6h3a.6.6,0,0,1,.6.6v9.532a.6.6,0,0,1-.6.6Zm-12.386,0a.6.6,0,0,1-.6-.6V35.816a.6.6,0,0,1,.6-.6h3a.6.6,0,0,1,.6.6v9.532a.6.6,0,0,1-.6.6Zm-53.967,0a.6.6,0,0,1-.6-.6V35.816a.6.6,0,0,1,.6-.6h3a.6.6,0,0,1,.6.6v9.532a.6.6,0,0,1-.6.6Zm-12.386,0a.6.6,0,0,1-.6-.6V35.816a.6.6,0,0,1,.6-.6h3a.6.6,0,0,1,.6.6v9.532a.6.6,0,0,1-.6.6Zm38.967-17.9V23.376H44.24V18.847h4.133V14.173h4.57v4.674h4.134v4.529H52.943v4.674Z" transform="translate(0 0)" fill="#b99460"/>
+							</g>
+						</svg>
+			        </div>
+
+			        <div id="logo_footer" class="container">
+			        	<img width="200" height="50" src="data:image/png;base64,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"/>
+			        </div>
+
+			        <div id="NotificacionEDS">  
+			            <span>
+			            <table>  
+					        <tr>  
+					            <td class="tituloNegritas">  
+					                <span>Registro Vacuna COVID</span> 					             
+					            </td>  
+					        </tr>  
+				            <tr>  
+				                <td>  
+				                	<br/>
+				                </td>  
+				            </tr>
+				            <tr>  
+				                <td class="textoNormalJustificado">  
+				                	Estimado(a): <span class="textoNegritasJustificado">[[${nombreCorreo}]]</span>
+				                </td>  
+				            </tr>
+				            <br><br>
+				            <tr>  
+				                <td class="textoNormalJustificado">  
+				                	Tu registro para la aplicaci&#243;n de vacuna COVID se ha realizado satisfactoriamente, para generar tu folio de asistencia, confirma tu cita de aplicaci&#243;n.
+				                </td>  
+				            </tr>  
+							<tr>  
+				                <td class="textoNormalJustificado">  
+				                	<br/>
+				                	<hr class="thin">
+				                	<br/>
+				                </td>  
+				            </tr>
+				            <tr>  
+				                <td>  
+				                    <table width="100%">
+				                    	<tr>
+				                    		<td class="textoNormalJustificado" width="25%">
+				                    			Si acepto ser vacunado
+				                    		</td>
+				                    	</tr>
+				                    	<tr>
+				                    		<td class="textoNormalJustificado" width="25%">
+				                    			<span style="color:#6d95e0;"><a th:href="${urlConfimacionSi}">Acepto</a></span></a>
+				                    		</td>
+				                    	</tr>
+				                    	<tr>  
+				                			<td class="textoNormalJustificado">  
+				                				<br/>
+				                					<hr class="thin">
+				                				<br/>
+				                			</td>  
+				            			</tr>
+				                    	<tr>
+				                    		<td class="textoNormalJustificado" width="25%">
+				                    			No acepto ser vacunado
+				                    		</td>
+				                    	</tr>
+				                    	<tr>
+				                    		<td class="textoNormalJustificado" width="25%">
+				                   <span style="color:#6d95e0;"> 			<a th:href="${urlConfimacionNo}" >No acepto</span></a>
+				                    		</td>
+				                    	</tr>
+				                    	<tr>  
+				                			<td class="textoNormalJustificado">  
+				                				<br/>
+				                					<hr class="thin">
+				                				<br/>
+				                			</td>  
+				            			</tr>
+				                    </table>
+				                </td>  
+				            </tr>  
+				            <tr>  
+				                <td class="textoNotaNormalJustificado">  
+				                	<br />
+				                	Usted cuenta con 24 Horas para responder.
+				                </td>  
+				            </tr>
+				            <tr>  
+				                <td class="textoAvisoNormalJustificado">  
+				                	<br />
+				                	Este correo ha sido generado autom&#225;ticamente favor de no responder.
+				                </td>  
+				            </tr>
+				            <tr>  
+				                <td class="textoAvisoNormalJustificado">  
+				                	<br />
+				                	<br />
+				                </td>  
+				            </tr>  
+				            <tr>  
+				                <td class="textoAvisoNormalJustificado">  
+				                    <span class="textoAvisoNegritasJustificado">AVISO DE PRIVACIDAD:</span> La Unidad Administrativa responsable del Sistema de Datos Personales es la Direcci&#243;n de Incorporaci&#243;n y Recaudaci&#243;n en coordinaci&#243;n con la Direcci&#243;n de Innovaci&#243;n y Desarrollo Tecnol&#243;gico, ambas dependientes del IMSS; en su caso el interesado podr&#225; ejercer los derechos de acceso y correcci&#243;n en la Subdelegaci&#243;n de control que corresponde al domicilio del patr&#243;n o del asegurado. Lo anterior se informa en cumplimiento del decimos&#233;ptimo de los Lineamientos de Protecci&#243;n de Datos Personales, publicados en el Diario Oficial de la Federaci&#243;n el 30 de septiembre de 2005.
+				                    <br />
+				                    <br />
+									<span class="textoAvisoNegritasJustificado">AVISO IMPORTANTE:</span> Este correo electr&#243;nico y/o el material adjunto es para uso exclusivo de la persona o la entidad a la que expresamente se le ha enviado, el cual contiene informaci&#243;n confidencial. Si no es el destinatario leg&#237;timo del mismo, por favor rep&#243;rtelo inmediatamente a la cuenta del remitente y elim&#237;nelo. Cualquier revisi&#243;n, almacenamiento, retransmisi&#243;n, difusi&#243;n o cualquier otro uso de este correo, por personas o entidades distintas a las del destinatario leg&#237;timo, queda expresamente prohibida. Este correo electr&#243;nico no pretende ni debe ser considerado como constitutivo de ninguna relaci&#243;n legal, contractual o de otra &#237;ndole similar.				                    
+				                </td>  
+				            </tr>  
+			            </table>  
+			            </span>  
+			    	</div>  
+			    </div>
+			</body>  
+			  
+			</html>
